@@ -48,7 +48,7 @@ int main()
         int r=rand()%pointc;
         pair <int, int> x;
         x=points[r];
-        cout<<"r:"<<r<<endl;
+        //cout<<"r:"<<r<<endl;
         if (!(find(current_centers.begin(),current_centers.end(),x)!=current_centers.end()))
         {
             current_centers.push_back(x);
@@ -130,7 +130,7 @@ int main()
         {
             breakcount=1;
             old_points_covered_max=points_covered;
-            cout<<"Points Covered: "<<points_covered<<"\n";
+            //cout<<"Points Covered: "<<points_covered<<"\n";
 
         }
         else
@@ -138,7 +138,7 @@ int main()
             breakcount++;
         }
     }
-    cout<<"Max points covered: "<<old_points_covered_max<<"\n";
-    cout<<"Iterations: "<<ni-pointc<<"\n";
+    cout<<old_points_covered_max<<"\n";
+    //cout<<"Iterations: "<<ni-pointc<<"\n";
 
 }
