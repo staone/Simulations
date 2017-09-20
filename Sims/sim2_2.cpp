@@ -49,7 +49,7 @@ int main(void)
     int not_reduced_count=0;
     bool flag=true;
     int counter=0;
-    while(not_reduced_count<10000)
+    while(not_reduced_count<pointc)
     {
         counter++;
 
