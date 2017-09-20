@@ -30,6 +30,7 @@ int main(void)
     cin>>k;
     cin>>pointc;
     cin>>r;
+    cout<<k<<" "<<pointc<<" "<<r<<" ";
     double current_r_max=INT_MAX;
     while(i<pointc)
     {

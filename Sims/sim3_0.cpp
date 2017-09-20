@@ -25,6 +25,7 @@ int main()
     cin>>k;
     cin>>pointc;
     cin>>r;
+    cout<<k<<" "<<pointc<<" "<<r<<" ";
     double current_r_max=INT_MAX;
     int no_of_replacements=4;
     while(i<pointc)
