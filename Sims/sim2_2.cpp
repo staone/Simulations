@@ -52,6 +52,8 @@ int main(void)
     while(not_reduced_count<10000)
     {
         counter++;
+
+        //Randomly selecting k centers out of n points.
         if (flag)
         {
             i=0;
@@ -80,7 +82,7 @@ int main(void)
             }
 
         }
-        else
+        else //Replacements for bad centers.
         {
             
             srand(time(0));
@@ -92,9 +94,9 @@ int main(void)
                 int old=no_of_replacements-1;//rand()%k;
                 srand(time(0)+rand());
                 int newc=rand()%pointc;
+                //Check whether this points exist as a center or not.
                 if (!(find(current_centers.begin(),current_centers.end(),points[newc])!=current_centers.end()))
                 {
-                   
                     current_centers[old]=points[newc];
                     no_of_replacements--;
                 }
