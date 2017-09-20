@@ -62,6 +62,7 @@ int main()
     int breakcount=1;
     old_points_covered_max=0;
     int ni=0;
+    //run the loop till there is conitnuos bad perfomance for 'pointc' times 
     while (breakcount<=pointc)
     {
         ni++;

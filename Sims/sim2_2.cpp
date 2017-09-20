@@ -1,3 +1,7 @@
+/* This program randomly selects k points as centers and finds the optimal radius for that set.
+The worst performing 4 centers are replaced randomly at end of each iteration.
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -50,6 +54,7 @@ int main(void)
     int not_reduced_count=0;
     bool flag=true;
     int counter=0;
+    //run the loop till there is conitnuos bad perfomance for 'pointc' times 
     while(not_reduced_count<pointc)
     {
         counter++;
@@ -87,7 +92,7 @@ int main(void)
         {
             
             srand(time(0));
-            int no_of_replacements=6;
+            int no_of_replacements=4;
             radius_of_each_k=temp;
             while(no_of_replacements>0)
             {
