@@ -139,6 +139,8 @@ int main(void)
         else
             not_reduced_count++;
         
+
+        //Get r elements with highest radius.
         int s = radius_of_each_k.size();
         double temp;
         pair<int,int> temp_pair;

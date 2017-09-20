@@ -6,6 +6,8 @@ vector <pair <int,int> > current_centers;
 vector <pair <int,int> > current_optimal_centers;
 vector <int> points_covered_by_each_k;
 
+
+//Distance Function
 double dist(pair<int,int> a, pair<int,int> b)
 {
     return sqrt(pow((double)a.first-(double)b.first,2)+pow((double)a.second-(double)b.second,2));
@@ -61,8 +63,6 @@ int main()
     int ni=0;
     while (breakcount<=pointc)
     {
-
-        //old_points_covered=points_covered;
         ni++;
         points_covered=0;
         for(int j=0;j<k;j++)
@@ -139,6 +139,6 @@ int main()
         }
     }
     cout<<"Max points covered: "<<old_points_covered_max<<"\n";
-    cout<<"Iterations: "<<ni<<"\n";
+    cout<<"Iterations: "<<ni-pointc<<"\n";
 
 }
