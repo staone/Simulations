@@ -86,7 +86,7 @@ int main(void)
         {
             
             srand(time(0));
-            int no_of_replacements=6;
+            int no_of_replacements=4;
             radius_of_each_k=temp;
             while(no_of_replacements>0)
             {
