@@ -15,22 +15,22 @@ double dist(pair<int,int> a, pair<int,int> b)
 
 int main()
 {
-	ifstream points_read;
+	//ifstream points_read;
     int i=0;
     string fname;
-    cin>>fname;
-    points_read.open(fname.c_str(),ifstream::in);
+    //cin>>fname;
+    //points_read.open(fname.c_str(),ifstream::in);
     int k,pointc;
     double r;
-    points_read>>k;
-    points_read>>pointc;
-    points_read>>r;
+    cin>>k;
+    cin>>pointc;
+    cin>>r;
     double current_r_max=INT_MAX;
     int no_of_replacements=4;
     while(i<pointc)
     {
         int x,y;
-        points_read>>x>>y;
+        cin>>x>>y;
         pair<int,int> inp;
         inp.first=x;
         inp.second=y;
@@ -38,7 +38,7 @@ int main()
         i++;
     }
     double opt;
-    points_read>>opt;
+    cin>>opt;
     i=0;
 
 //Select k random centers initially.

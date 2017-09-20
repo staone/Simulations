@@ -18,23 +18,23 @@ double dist(pair<int,int> a, pair<int,int> b)
 
 int main(void)
 {
-    ifstream points_read;
+    //ifstream points_read;
     int i=0;
     int k,pointc;
     double r;
     string fname;
-    cin>>fname;
-    points_read.open(fname.c_str(),ifstream::in);
+    //cin>>fname;
+    //points_read.open(fname.c_str(),ifstream::in);
     
 // Reading the input from the file.
-    points_read>>k;
-    points_read>>pointc;
-    points_read>>r;
+    cin>>k;
+    cin>>pointc;
+    cin>>r;
     double current_r_max=INT_MAX;
     while(i<pointc)
     {
         int x,y;
-        points_read>>x>>y;
+        cin>>x>>y;
         pair<int,int> inp;
         inp.first=x;
         inp.second=y;
@@ -42,8 +42,8 @@ int main(void)
         i++;
     }
     double opt;
-    points_read>>opt;
-	cout<<"Optimal: "<<opt<<endl;
+    cin>>opt;
+	//cout<<"Optimal: "<<opt<<endl;
     
 
     int not_reduced_count=0;
@@ -65,7 +65,7 @@ int main(void)
                 int r=rand()%pointc;
                 pair <int, int> x;
                 x=points[r];
-                cout<<"r:"<<r<<endl;
+                //cout<<"r:"<<r<<endl;
                 if (!(find(current_centers.begin(),current_centers.end(),x)!=current_centers.end()))
                 {
                     current_centers.push_back(x);
@@ -78,7 +78,7 @@ int main(void)
             for(vector< pair <int,int> >::iterator it=current_centers.begin(); it != current_centers.end();++it)
             {
                 pair<int, int> p=*it;
-                cout<<p.first<<" "<<p.second<<endl;
+                //cout<<p.first<<" "<<p.second<<endl;
             }
 
         }
@@ -86,7 +86,7 @@ int main(void)
         {
             
             srand(time(0));
-            int no_of_replacements=4;
+            int no_of_replacements=6;
             radius_of_each_k=temp;
             while(no_of_replacements>0)
             {
@@ -134,7 +134,7 @@ int main(void)
             current_r_max=ans;
             current_optimal_centers=current_centers;
             not_reduced_count=0;
-            cout<<"Changed in iteration:" <<counter<<endl;
+            //cout<<"Changed in iteration:" <<counter<<endl;
         }
         else
             not_reduced_count++;
@@ -160,7 +160,7 @@ int main(void)
 
 
     }
-	cout<<not_reduced_count<<endl;
+	//cout<<not_reduced_count<<endl;
     cout<<current_r_max<<endl;
   return 0;
 }
